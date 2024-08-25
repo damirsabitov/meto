@@ -128,34 +128,22 @@ body {}
     display: flex;
 }
 
+.info__border {
+    position: relative;
+    width: 550px;
+    height: 265px;
+    background-image: url(../images/border.png);
+    background-repeat: no-repeat;
+}
+
 .info__title {
     display: flex;
     align-items: center;
     min-height: 266px;
-    position: absolute;
-}
-
-.info__border {
-    --borderWidth: 1px;
-    --borderRadius: 30px;
-
     position: relative;
-    width: 550px;
-    height: 265px;
-    background-color: #8f47ff;
-    background-clip: padding-box;
-    border: var(--borderWidth) solid transparent;
-    border-radius: var(--borderRadius);
-}
-
-.info__border::before {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    inset: calc(var(--borderWidth) * -1);
-    background-image:
-        linear-gradient(to right, white 30%, transparent 60%);
-    border-radius: inherit;
+    /* Change to relative to stack correctly */
+    z-index: 1;
+    /* Ensure text is above the pseudo-element */
 }
 
 .info__title--h1 {
@@ -286,9 +274,19 @@ body {}
     display: flex;
     flex-direction: column;
     gap: 24px;
+    max-width: 285px;
     width: 100%;
     min-height: 190px;
+    background-image: url(../images/border2.png);
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    padding-left: 15px;
 }
+
+.info__card--title {
+    padding-bottom: 30px;
+}
+
 
 .info__card--title {
     font-weight: 800;
@@ -298,7 +296,8 @@ body {}
 
 .info__card--h2 {
     font-weight: 700;
-    font-size: 20px;
+    display: flex;
+    font-size: 18px;
     color: #8f47ff;
 }
 
@@ -314,6 +313,7 @@ body {}
 .integration__container {
     display: flex;
     justify-content: center;
+    margin-top: 60px;
 }
 
 .integration__title>h1 {
@@ -432,6 +432,27 @@ body {}
     align-items: flex-end;
     margin-top: 60px;
     min-height: 590px;
+    position: relative;
+}
+
+.form__titles {
+    display: flex;
+}
+
+.form__image--one {
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    float: right;
+    right: 0;
+
+}
+
+.form__image--two {
+    position: absolute;
+    right: 0;
+    top: 0;
+    
 }
 
 .form__body {
@@ -461,6 +482,12 @@ body {}
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
+}
+
+.form__title__image {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
 }
 
 .form__title {

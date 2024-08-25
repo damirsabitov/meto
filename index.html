@@ -108,7 +108,7 @@
         <section class="section">
             <div class="container">
                 <div class="info__emp">
-                    <div class="info__card info__card--employer">
+                    <div class="info__card--employer">
                         <div class="info__card--title">Работодателю</div>
                         <div class="info__cards">
                             <div class="info__card">
@@ -146,7 +146,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="info__card info__card--employees">
+                    <div class="info__card--employees">
                         <div class="info__card--title">Сотрудникам</div>
                         <div class="info__cards">
                             <div class="info__card">
@@ -247,15 +247,22 @@
         <section class="section">
             <div class="container">
                 <div class="form">
-                    <form action="#" id="form" class="form__body">
-                        <h1 class="form__title">Подать заявку на подключение к METO</h1>
+                    <form action="#" method="post" id="form" class="form__body">
+                        <div class="form__titles">
+                            <div class="form__title__image">
+                                <h1 class="form__title">Подать заявку на подключение к METO</h1>
+                            </div>
+                            <img class="form__image--two" src="images/men.png" alt="men">
+                            <img class="form__image--one" src="images/poisk2.png" alt="img">
+                        </div>
                         <div class="form__items">
                             <div class="form__item">
                                 <label for="forName" class="form__label _req">ФИО:</label>
                                 <input id="forName" type="text" name="name" placeholder="ФИО" class="form__input">
                             </div>
                             <div class="form__item">
-                                <label for="forNameOfTheOrganization" class="form__label _req _organization">Название организации:</label>
+                                <label for="forNameOfTheOrganization" class="form__label _req _organization">Название
+                                    организации:</label>
                                 <input id="forNameOfTheOrganization" type="text" name="nameoftheorganization"
                                     placeholder="Название организации" class="form__input">
                             </div>
