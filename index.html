@@ -246,11 +246,39 @@
 
         <section class="section">
             <div class="container">
+                <div class="form">
+                    <form action="#" id="form" class="form__body">
+                        <h1 class="form__title">Подать заявку на подключение к METO</h1>
+                        <div class="form__items">
+                            <div class="form__item">
+                                <label for="forName" class="form__label">ФИО:</label>
+                                <input id="forName" type="text" name="name" placeholder="ФИО" class="form__input">
+                            </div>
+                            <div class="form__item">
+                                <label for="forNameOfTheOrganization" class="form__label">Название организации:</label>
+                                <input id="forNameOfTheOrganization" type="text" name="nameoftheorganization"
+                                    placeholder="Название организации" class="form__input">
+                            </div>
+                            <div class="form__item">
+                                <label for="forNumber" class="form__label">Номер телефона:</label>
+                                <input id="forNumber" type="text" name="number" placeholder="+7" class="form__input">
+                            </div>
+                        </div>
+                        <div class="form__infos">
+                            <div class="form__info">
+                                <p class="form__paragraph">Какая-нибудь важная информация или еще что-то, что можно тут
+                                    разместить в текстовом виде.
+                                    Например условия подачи заявки, что будет после подачи и так далее.</p>
+                            </div>
+                            <button type="submit" class="form__buttom">Подать заявку</button>
+                    </form>
+                </div>
+            </div>
             </div>
         </section>
 
     </main>
-
+    <script src="js/main.js"></script>
 </body>
 
 </html>
