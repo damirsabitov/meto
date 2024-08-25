@@ -427,6 +427,13 @@ body {}
 
 /* * form */
 
+.form {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 60px;
+    min-height: 590px;
+}
+
 .form__body {
     max-width: 1200px;
     width: 100%;
@@ -475,6 +482,8 @@ body {}
     max-width: 360px;
     width: 100%;
     min-height: 50px;
+    padding-left: 12px;
+    padding-top: 5px;
 }
 
 .form__paragraph {
@@ -491,7 +500,7 @@ body {}
     width: 100%;
     min-height: 70px;
     background-color: #e2ff65;
-    border: none;
+    border-color: #e2ff65;
     font-weight: 600;
     font-size: 18px;
     text-align: center;
