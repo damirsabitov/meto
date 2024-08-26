@@ -29,7 +29,7 @@ try {
 
     //Recipients
     $mail->setFrom('from@example.com', 'FromFrom');
-    $mail->addAddress('damirsabitov2905@yandex.com', 'ToTo');     //Add a recipient
+    $mail->addAddress('to@example.com', 'ToTo');     //Add a recipient
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
