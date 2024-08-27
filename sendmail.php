@@ -19,20 +19,20 @@ $phone = trim(filter_var($_POST['number'], FILTER_SANITIZE_NUMBER_INT));
 try {
     //Server settings
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    // $mail->isSMTP();                                            //Send using SMTP
-    // $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
-    // $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    // $mail->Username   = 'user@example.com';                     //SMTP username
-    // $mail->Password   = 'secret';                               //SMTP password
-    // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    // $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'no-reply@meto-group.ru';                     //SMTP username
+    $mail->Password   = '2QCAjWzT!';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     $mail->CharSet = 'UTF-8';
 
 
     //Recipients
-    $mail->setFrom('damirsabitov2905@yandex.com', 'FromFrom');
-    $mail->addAddress('ramzilhalitov44@gmail.com', 'ToTo');     //Add a recipient
+    $mail->setFrom('no-reply@meto-group.ru', 'FromFrom');
+    $mail->addAddress('no-reply@meto-group.ru', 'ToTo');     //Add a recipient
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML

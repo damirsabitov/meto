@@ -67,8 +67,13 @@
                     <div class="info__people">
                         <img src="images/people.png" alt="people">
                     </div>
+                    
                 </div>
+                
             </div>
+            <div class="apps__link--body"><a class="apps__link" href="#">
+                    Скачать приложение
+                    </a></div>
         </section>
 
         <section class="section">
@@ -77,7 +82,7 @@
                     <div class="apps__poisk">
                         <img class="apps__image" src="images/poisk.png" alt="poisk">
                     </div>
-                    <div class="apps__link"><a href="#"><img src="images/apps.svg" alt=""></a></div>
+                    
                     <div class="apps__infos">
                         <div class="apps__info">
                             <h1 class="apps__info--h1">МЕТО - это универсальное решение для работодателя и работника.
@@ -222,7 +227,7 @@
                         <img class="integration__image--cab" src="images/cab.png" alt="cab">
                         <div class="integration__table--small">
                             <img src="images/s7.png" alt="strelka">
-                            <a href="#"><img src="images/rbs-table.png" alt="table--mini"></a>
+                            <div><img class="itegration__rbs--table" src="images/rbs-table.png" alt="table--mini"></div>
                         </div>
                     </div>
                     <div class="integration__images">
@@ -433,46 +438,75 @@
         <section class="section">
             <div class="container">
                 <div class="questions">
-                    <div class="questions__title">Часто задаваемые вопросы (FAQ)
-
-                    </div>
+                    <div class="questions__title">Часто задаваемые вопросы (FAQ)</div>
                     <div class="questions__items">
                         <div class="questions__item">
-                            <details class="questions__item--details">
-                                <summary class="questions__item--summary">Что такое METO?
-                                    <img class="questions__item__image--two" src="images/krest.png" alt="img">
+                            <details class="details">
+                                <summary class="details__title">Что такое METO?
+                                    <img class="details__image--one" src="images/krest.png" alt="Plus icon">
+                                    <img class="details__image--two" src="images/minus.png" alt="Minus icon">
                                 </summary>
-                                <p class="questions__item--paragraph">МЕТО - это универсальное решение для работодателя
-                                    и
-                                    работника. Сервис позволяет быстро находить подходящую вакансию.</p>
+                                <div class="details__content">
+                                    <p>МЕТО - это универсальное решение для работодателя и работника. Сервис позволяет
+                                        быстро находить подходящую вакансию.</p>
+                                </div>
                             </details>
                         </div>
                         <div class="questions__item">
-                            <details class="questions__item--details">
-                                <summary class="questions__item--summary">Как начать пользоваться METO, если я ищу
-                                    работу?
-                                    <img class="questions__item__image--two" src="images/krest.png" alt="img">
+                            <details class="details">
+                                <summary class="details__title">Как начать пользоваться METO, если я ищу работу?
+                                    <img class="details__image--one" src="images/krest.png" alt="Plus icon">
+                                    <img class="details__image--two" src="images/minus.png" alt="Minus icon">
                                 </summary>
-                                <p class="questions__item--paragraph">МЕТО - это универсальное решение для работодателя
-                                    и
-                                    работника. Сервис позволяет быстро находить подходящую вакансию.</p>
+                                <div class="details__content">
+                                    <p>МЕТО - это универсальное решение для работодателя и работника. Сервис позволяет
+                                        быстро находить подходящую вакансию.</p>
+                                </div>
                             </details>
                         </div>
                         <div class="questions__item">
-                            <details class="questions__item--details">
-                                <summary class="questions__item--summary">Как начать пользоваться METO, если я ищу
-                                    сотрудника?
-                                    <img class="questions__item__image--two" src="images/krest.png" alt="img">
+                            <details class="details">
+                                <summary class="details__title">Как начать пользоваться METO, если я ищу сотрудника?
+                                    <img class="details__image--one" src="images/krest.png" alt="Plus icon">
+                                    <img class="details__image--two" src="images/minus.png" alt="Minus icon">
                                 </summary>
-                                <p class="questions__item--paragraph">МЕТО - это универсальное решение для работодателя
-                                    и
-                                    работника. Сервис позволяет быстро находить подходящую вакансию.</p>
+                                <div class="details__content">
+                                    <p>МЕТО - это универсальное решение для работодателя и работника. Сервис позволяет
+                                        быстро находить подходящую вакансию.</p>
+                                </div>
                             </details>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <style>
+            /* Your existing CSS */
+            .details__image--two {
+                display: none;
+                /* Hide the minus image by default */
+                width: 2px;
+                height: 74px;
+            }
+        </style>
+
+        <script>
+            document.querySelectorAll('.details').forEach(details => {
+                details.addEventListener('toggle', () => {
+                    const plusImage = details.querySelector('.details__image--one');
+                    const minusImage = details.querySelector('.details__image--two');
+
+                    if (details.open) {
+                        plusImage.style.display = 'none'; // Hide plus image
+                        minusImage.style.display = 'block'; // Show minus image
+                    } else {
+                        plusImage.style.display = 'block'; // Show plus image
+                        minusImage.style.display = 'none'; // Hide minus image
+                    }
+                });
+            });
+        </script>
 
     </main>
     <footer class="footer">
@@ -503,14 +537,17 @@
                 <div class="footer__item footer__item--four">
                     <h2 class="footer__item--apps footer__item--title--all">Скачать приложение:</h2>
                     <div class="footer__item--buttons">
-                        <button class="footer__item--button footer__item--button--one"><img src="images/apple.png" alt="ios">iOS</button>
-                        <button class="footer__item--button footer__item--button--two"><img src="images/android.png" alt="android">Android</button>
+                        <button class="footer__item--button footer__item--button--one"><img src="images/apple.png"
+                                alt="ios">iOS</button>
+                        <button class="footer__item--button footer__item--button--two"><img src="images/android.png"
+                                alt="android">Android</button>
                     </div>
                 </div>
             </div>
             <div class="footer__rights">Все права защищены.</div>
         </div>
     </footer>
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/main.js"></script>
 </body>
 

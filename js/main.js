@@ -19,3 +19,8 @@ function scrollToNextCard() {
 // Automatically scroll every 3 seconds
 setInterval(scrollToNextCard, 3000);
 
+const inputPhone = document.getElementById('forNumber');
+const inputPhoneMaskOptions = {
+  mask: '+{7} (000) 000-00-00'
+};
+const inputPhoneMask = IMask(inputPhone, inputPhoneMaskOptions);

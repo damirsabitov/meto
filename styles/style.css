@@ -86,6 +86,7 @@ body {}
 
 .arrow__link:hover {
     background-color: #ccc;
+    box-shadow: 0 0 8px 0 #e2ff65;
 }
 
 .arrow__link img {
@@ -116,6 +117,7 @@ body {}
     display: flex;
     gap: 6px;
     justify-content: center;
+    min-height: 49px;
     max-width: 630px;
     width: 100%;
     border-radius: 16px;
@@ -143,11 +145,19 @@ body {}
 }
 
 .nav__link {
-    width: 150px;
+    width: 140px;
     min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5px 5px;
+}
+
+.nav__link:hover {
+    background-color: #8f47ff;
+    border-radius: 12px;
+    transition: .3s;
+    margin: 5px 5px;
 }
 
 .nav__button {
@@ -163,11 +173,16 @@ body {}
     border: none;
 }
 
+.nav__button:hover {
+    box-shadow: 0 0 8px 0 #e2ff65;
+}
+
 /* * info */
 
 
 .info__container {
     display: flex;
+
 }
 
 .info__border {
@@ -199,7 +214,7 @@ body {}
     position: absolute;
     top: 0;
     right: 0;
-    padding-top: 32px;
+    padding-top: 40px;
     z-index: 10;
 }
 
@@ -219,18 +234,48 @@ body {}
     border-radius: 30px;
 }
 
+.apps__link--body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    position: absolute;
+
+    left: 37%;
+    min-height: 115px;
+    z-index: 100;
+    width: 100%;
+    margin-top: 120px;
+    background-image: url(../images/zadnik--apps.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .apps__link {
     display: flex;
-    position: relative;
-    z-index: 100;
+    align-items: center;
+    background-color: #e2ff65;
     justify-content: center;
-    margin-top: -50px;
+    max-width: 285px;
+    width: 100%;
+    min-height: 70px;
+    border-radius: 22px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+}
+
+.apps__link:hover {
+    box-shadow: 0 0 8px 0 #e2ff65;
 }
 
 .apps__info {
     display: flex;
     max-width: 842px;
     min-height: 92px;
+    padding-top: 135px;
     float: top;
     align-items: center;
 }
@@ -467,6 +512,8 @@ body {}
     padding-top: 40px;
 }
 
+.itegration__rbs--table {}
+
 /* * form */
 
 .form {
@@ -574,6 +621,10 @@ body {}
     border: none;
 }
 
+.form__buttom:hover {
+    box-shadow: 0 0 8px 0 #e2ff65;
+}
+
 
 /* * download */
 
@@ -612,6 +663,10 @@ body {}
     font-weight: 600;
     font-size: 18px;
     color: #000;
+}
+
+.download__button:hover {
+    box-shadow: 0 0 8px 0 #e2ff65;
 }
 
 /* * reviews */
@@ -702,7 +757,6 @@ body {}
     font-size: 36px;
     text-align: center;
     color: #000;
-
 }
 
 .questions__items {
@@ -711,39 +765,67 @@ body {}
     gap: 10px;
 }
 
-.questions__item--details {
-    max-width: 1200px;
+.questions__item {
     width: 100%;
-    min-height: 94px;
-    display: flex;
-    padding: 30px 30px;
     border: 1px solid #000;
     border-radius: 20px;
+    padding: 30px;
 }
 
-.questions__item--summary {
+
+.details {
+    position: relative;
+    display: block;
+    max-width: 1200px;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.details[open] .details__title {
+    margin-bottom: 32px;
+}
+
+.details__image--one {
+    width: 34px;
+    height: 34px;
+}
+
+.details__image--two {
+    width: 2px;
+    height: 74px;
+    rotate: 90deg;
+}
+
+.details__title {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    background: #fff;
     font-weight: 600;
     font-size: 26px;
     color: #000;
+    cursor: pointer;
+    list-style: none;
+    transition: .3s;
 }
 
-.questions__item--paragraph {
-    padding-top: 32px;
+.details__title::-webkit-details-marker {
+    display: none;
+}
+
+.details__content {
     font-weight: 500;
     font-size: 20px;
     color: #000;
 }
 
-
-
-.questions__item__image--two {
-    width: 34px;
-    height: 34px;
+.details__content p:last-child {
+    margin-bottom: 0;
 }
 
+.details__content p:first-child {
+    margin-top: 0;
+}
 
 /* * footer */
 
