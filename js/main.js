@@ -18,3 +18,4 @@ function scrollToNextCard() {
 
 // Automatically scroll every 3 seconds
 setInterval(scrollToNextCard, 3000);
+

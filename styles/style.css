@@ -20,6 +20,19 @@
     font-style: normal;
 }
 
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: .0625rem;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 
 :root {
     --container-max-width-medium: calc(1200px + (var(--container-padding-inline) * 2));
@@ -605,6 +618,7 @@ body {}
 
 .reviews {
     margin-bottom: 60px;
+    position: relative;
 }
 
 .reviews__title {
@@ -665,12 +679,19 @@ body {}
     min-height: 156px;
 }
 
+.reviews__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
 /* * dropdown */
 
 .questions {
     display: flex;
     flex-direction: column;
-    margin-bottom: 420px;
+    margin-bottom: 216px;
 }
 
 .questions__title {
@@ -681,6 +702,7 @@ body {}
     font-size: 36px;
     text-align: center;
     color: #000;
+
 }
 
 .questions__items {
@@ -713,9 +735,109 @@ body {}
     font-weight: 500;
     font-size: 20px;
     color: #000;
-} 
+}
 
-.questions__item--image {
+
+
+.questions__item__image--two {
     width: 34px;
     height: 34px;
+}
+
+
+/* * footer */
+
+.footer {
+    width: 100%;
+    min-height: 416px;
+    background-color: #E2FF65;
+}
+
+.footer__items {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 285px;
+    width: 100%;
+    min-height: 330px;
+    padding-top: 40px;
+}
+
+.footer__item--one {
+    gap: 53px;
+}
+
+.footer__images--two {
+    display: flex;
+    gap: 14px;
+}
+
+.footer__item--all {
+    font-weight: 600;
+    font-size: 18px;
+    color: #000;
+}
+
+.footer__item--title--all {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+    padding-bottom: 35px;
+}
+
+.footer__item--numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer__item--number--two {
+    padding-bottom: 15px;
+}
+
+.footer__item--email {
+    padding-bottom: 10px;
+}
+
+.footer__item--address {
+    max-width: 201px;
+}
+
+.footer__item--reviews {
+    padding-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+}
+
+.footer__item--buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer__item--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    border-radius: 22px;
+    max-width: 140px;
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 5px 35px;
+    min-height: 50px;
+}
+
+.footer__rights {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #000;
 }

@@ -27,6 +27,9 @@ try {
     // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     // $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
+    $mail->CharSet = 'UTF-8';
+
+
     //Recipients
     $mail->setFrom('damirsabitov2905@yandex.com', 'FromFrom');
     $mail->addAddress('ramzilhalitov44@gmail.com', 'ToTo');     //Add a recipient
@@ -38,7 +41,9 @@ try {
     $mail->AltBody = "Пользователь {$name} оставил заявку на подключение. Его данные: \nФИО: {$name}\nНазвание организации: {$organization}\nНомер телефона: {$phone}";
 
     $mail->send();
-    echo 'Message has been sent';
+    header('Location: .');
+    die();
+    // echo 'Message has been sent';
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
