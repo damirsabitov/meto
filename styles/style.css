@@ -820,6 +820,7 @@ body {
     border: none;
     padding: 5px 35px;
     min-height: 50px;
+    color: #000;
 }
 
 .footer__rights {
